@@ -2,7 +2,9 @@
 
 function Home() {
   return (
-    <div>Home</div>
+    <div className="mt-20">
+      <p>Está é a página inicial</p>
+    </div>
   )
 }
 
