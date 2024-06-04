@@ -1,16 +1,16 @@
-import Header from "./assets/Components/Header.jsx"
-import Home from "./assets/Components/Home.jsx"
+import { createBrowserRouter, Link, RouterProvider} from "react-router-dom";
+import Home from "./pages/Home.jsx";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+]);
 
 function App() {
   return (
-    <main>
-      <header>
-        <Header />
-      </header>
-      <div className="">
-        <Home />
-      </div>
-    </main>
+    <RouterProvider router={router} />
   )
 }
 

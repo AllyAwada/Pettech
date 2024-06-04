@@ -1,11 +1,16 @@
-import Profile from "/Profile.svg"
+import { Link } from "react-router-dom"
+import Logo from "/logo.svg"
 
 function Header() {
   return (
-    <div className="w-screen bg-gray-800  flex justify-between top-0 left-0 fixed">
-      <a className="ml-5 my-3 px-5 py-1 text-slate-300 text-xl font-bold transition duration-700 border-2 border-transparent rounded-3xl hover:border-slate-300 cursor-pointer" href="/">Home</a>
-
-      <a className="mr-5 my-3 px-1 py-1 transition duration-700 border-2 border-transparent rounded-full hover:border-slate-300 cursor-pointer" href="/"><img className="h-8" src={Profile} alt="" /></a>
+    <div className="w-screen flex justify-between items-center top-0 left-0 fixed">
+      <a className="ml-5 my-3 px-5 py-1 cursor-pointer" href="/"><img className="w-20" src={Logo} alt="" /></a>
+      <ul className="mr-32">
+        <Link className="mr-5 my-3 px-1 py-1 cursor-pointer font-allerta text-textHeader duration-500 hover:text-xl" to="/">PRODUTO</Link>
+        <Link className="mr-5 my-3 px-1 py-1 cursor-pointer font-allerta text-textHeader duration-500 hover:text-xl" to="/">CRIADORES</Link>
+        <Link className="mr-5 my-3 px-1 py-1 cursor-pointer font-allerta text-textHeader duration-500 hover:text-xl" to="/">PEÇAS</Link>
+        <Link className="mr-5 my-3 px-1 py-1 cursor-pointer font-allerta text-textHeader duration-500 hover:text-xl" to="/">REFERÊNCIAS</Link>
+      </ul>
     </div>
 
   )
